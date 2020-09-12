@@ -48,7 +48,7 @@ class Product(models.Model):
             s3.download_object(
                 new_path,
                 settings.AWS_STORAGE_BUCKET_NAME,
-                file['document'])
+                file['path'])
 
             try:
                 s3.upload_object(
