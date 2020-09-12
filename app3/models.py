@@ -70,12 +70,12 @@ class SellerInvoice(Invoice):
 
 class SellerInvoiceFile(File):
     seller_invoice = models.ForeignKey(SellerInvoice, related_name='seller_files',
-                                on_delete=models.CASCADE)
+                                       on_delete=models.CASCADE)
 
 
 # buyer
 class BuyerInvoice(Invoice):
-    pass
+    product = models.OneToOneField(Product, on_delete=models.CASCADE)
 
 
 class BuyerInvoiceFile(File):
