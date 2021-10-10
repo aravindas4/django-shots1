@@ -40,11 +40,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Plugins
+    'rest_framework',
+
     # apps,
     'app1',
     'app2',
     'app3',
     'app4',
+    'elastic',
 
     # utils
     'utils',
@@ -95,6 +99,13 @@ DATABASES = {
     }
 }
 
+# Rest Framework
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': (
+        'rest_framework.pagination.LimitOffsetPagination'
+    ),
+    'PAGE_SIZE': 25
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
