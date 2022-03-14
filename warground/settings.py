@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'app3',
     'app4',
     'elastic',
+    'psql',
 
     # utils
     'utils',
