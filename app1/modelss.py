@@ -4,6 +4,7 @@
 # Each song in a movie can be of different genre
 #
 # Search songs based on Artist name or  movie name or Genre name
+from enum import Enum
 
 class Artist:
     pass
